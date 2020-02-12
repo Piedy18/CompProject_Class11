@@ -44,6 +44,8 @@ while True:
         for i in range(len(w)):
             print(s[i],end=" ")
         print("You won!")
+        break
     if l==0:
         print("You lost :(")
-        print("Word was ",w)
+        print("Word was",w)
+        break
