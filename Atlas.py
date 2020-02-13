@@ -5,7 +5,8 @@ with open ("Cities.txt","r") as f:
     x=((f.read()).lower()).split()
 a=input("Name a city in India").lower()
 for i in range(500):
-    if a in x:
+    b=a[::-1]
+    if a in x and a[-1]==b[0]:
         print("You have 10 seconds to name a city in India that starts with ", a[-1])
         datetimeobj1=datetime.now()
         timeobj1=datetimeobj1.time()
@@ -19,7 +20,7 @@ for i in range(500):
         datetimeobj2=datetime.now()
         timeobj2=datetimeobj2.time()
         seconds_finish=timeobj2.second
-        if b in x:
+        if b in x and b[0]==a[-1]:
             if seconds_finish-seconds_start>15.0:
                 print("Oops, you have run out of time!")
                 print("You lost :(")
